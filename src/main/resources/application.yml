@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demoApp6
+#  security:
+#    user:
+#      name: frank
+#      password: 123
+#      roles: USER, ADMIN
+  datasource:
+    url: jdbc:postgresql://localhost:5433/exampledb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
