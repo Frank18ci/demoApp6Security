@@ -29,10 +29,11 @@ public class AuthController {
                 )
         );
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        System.out.println(userDetails.getAuthorities());
+        System.out.println(userDetails.toString());
         String token = jwtUtils.generateToken(userDetails);
         return ResponseEntity.ok()
-                .header(HttpHeaders.AUTHORIZATION, "Bearer: " + token)
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .body("Todo fue exitoso");
     }
+
 }
